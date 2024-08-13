@@ -1,143 +1,215 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
+<html lang="en"><head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DarulQuranBarokah - Title and Subtitle Next to Image</title>
+    <title>Darul Qur'an Barokah</title>
     <style>
         body {
+            margin: 0;
             font-family: Arial, sans-serif;
-            margin: 10px;
-            background-color: #fff;
-            color: #0E2E05;
+            line-height: 1.6;
         }
-        .container {
+        .header {
             display: flex;
-            align-items: left; /* Mengatur gambar dan judul agar sejajar secara vertikal */
-        }
-        .container img {
-            width: 60px; /* Atur ukuran gambar sesuai keinginan */
-            height: auto;
-            margin-right: 5px; /* Memberi jarak antara gambar dan judul */
-            margin-left: 10px;
-            border-radius: 8px;
-        }
-         .text-content {
-	    text-align: left;
-	    line-height: 1;
-	    max-width: 100%;
-        }
-        h1 {
-            font-size: 18px;
-        }
-        p {
-            font-size: 10px;
-            color: #555;
-        }
-    </style>
-</head>
-<body>
-    <div class="container">
-        <img src="Logo.png">
-        <div class="text-content">
-            <h1>Darul Qur'an Barokah</h1>
-            <p>Layanan Jasa Pendidikan</p>
-        </div>
-    </div>
-</body>
-<body>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-	    text-align: justify;
-            margin: 5px;
-            line-height: 1;
-            background-color: #DAFFD0;
-            color: #0E2E05;
-        }
-        header {
-            margin-bottom: 20px;
-        }
-        article {
-            background: #fff;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
-        }
-        h1, h2 {
-	    font-size: 36px;
-            color: #0E2E05;
-        }
-        .paragraph {
-	    font-size: 18px;
-	    text-align: justify;
-            line-height: 1.2;
-            margin-bottom: 20px;
-        }
-        .author, .date {
-            font-size: 0.9em;
-            color: #97B38F;
-        }
-    </style>
-</body>
-<body>
-    <article>
-        <h2>Tentang Kami</h2>
-        <p class="author">By Akbar Suriadinata</p>
-        <p class="date">Published on August 9, 2024</p>
-        
-        <p class="paragraph">Darul Qur'an Barokah adalah sebuah perusahaan yang berizin resmi pada Kementrian Hukum dan Hak Asasi Manusia serta memiliki Nomor Izin Berusaha yang terdaftar.</p>
-        
-        <p class="paragraph">PT. Darul Quran sebuah perusahaan yang bergerak pada layanan jasa pendidikan berbasis offline das online dan dirikan pada awal tahun 2024, Seiring perkembangan zaman pada eru modernisasi, kebutuhan dalam peningkatan pencapaian perkembangan pengetahuan sangat amat sekali dibunuhkan, haik pada bidang pengetahuan vununi dan keagamaan, guna untuk kepentingan dan keperluan pada persiapan dalam menghadapi tantangan zaman.</p>
-        
-        <p class="paragraph">Maka dari itu. PT. Darul Quran merupakan salah satu solusi bagi generasi milenial yang membutuhkan tambahan belajar dalam upaya peningkatan mutu prestasi, Kelas yang disediakan berbasis tatap muka dan dalam jaringan seperti platform google meet, room meet dan sebagainya. Serta materi yang dihuhas pada kagiatan pembelajaran diperusahaan ini, berdasarkan acuan pada silabus dan kurikulum yang berlaku pada sistem pendidikan di Negara Republik Indonesia.</p>
-        
-        <p class="conclusion">Management Darul Qur'an Barokah.</p>
-    </article>
-</body>
-<body>
-    <style>
-	#target-section
-        .container {
-            display: flex;
-            align-items: center; /* Menyelaraskan teks dan tombol secara vertikal */
-            margin: 20px;
-            font-family: Arial, sans-serif;
-        }
-        .text {
-            font-size: 18px;
-            color: #333;
-	    line-height: 1;
-            margin-right: 20px;
-	    margin-bottom: 0px;
-        }
-        .whatsapp-button {
-            padding: 20px 30px;
-            background-color: #25D366; /* Warna hijau khas WhatsApp */
+            align-items: center;
+            background-color: #333;
+            padding: 10px 20px;
             color: white;
+        }
+        .header img {
+            height: 50px;
+            margin-right: 20px;
+        }
+        .header .website-info {
+            flex-grow: 1;
+        }
+        .header .website-name {
+            font-size: 1.5em;
+            margin: 0;
+        }
+        .header .slogan {
+            font-size: 0.9em;
+            margin: 0;
+        }
+        .header .menu {
+            position: relative;
+            display: inline-block;
+        }
+        .header .menu button {
+            background-color: #333;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            font-size: 1em;
+        }
+        .header .menu-content {
+            display: none;
+            position: absolute;
+            right: 0;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+        .header .menu-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+        .header .menu-content a:hover {
+            background-color: #f1f1f1;
+        }
+        .header .menu:hover .menu-content {
+            display: block;
+        }
+        .header .menu button:hover {
+            background-color: #575757;
+        }
+        .content {
+            padding: 20px;
+        }
+        .section {
+            padding: 20px;
+            margin-bottom: 40px;
+            border-radius: 5px;
+        }
+        .section:nth-child(odd) {
+            background-color: #f0f8ff; /* AliceBlue */
+        }
+        .section:nth-child(even) {
+            background-color: #e6e6fa; /* Lavender */
+        }
+        .section h2 {
+            color: #333;
+        }
+        .register-button {
+            display: inline-block;
+            background-color: #28a745;
+            color: white;
+            padding: 10px 20px;
             text-decoration: none;
             border-radius: 5px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            font-size: 18px;
-            text-align: center;
-            transition: background-color 0.3s;
+            font-size: 1em;
         }
-        .whatsapp-button:hover {
-            background-color: #20b957; /* Warna saat di-hover */
+        .social-media {
+            margin-top: 20px;
+        }
+        .social-media a {
+            margin-right: 10px;
+            color: #333;
+            text-decoration: none;
+            font-size: 1.2em;
+        }
+        ul {
+            list-style-type: disc;
+            margin-left: 20px;
+        }
+        ol {
+            list-style-type: decimal;
+            margin-left: 20px;
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+        }
+        .column {
+            flex: 1;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+            background-color: #f9f9f9;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        .column h2 {
+            color: #333;
+        }
+        @media (min-width: 800px) {
+            .container {
+                flex-direction: row;
+                justify-content: space-between;
+            }
+            .column {
+                width: 30%;
+            }
         }
     </style>
 </head>
 <body>
-    <div id="target-section">
+
+    <div class="header">
+        <img src="LogoPutih.png">
+        <div class="website-info">
+            <p class="website-name">Darul Qur'an Barokah</p>
+            <p class="slogan">Layanan Jasa Pendidikan</p>
+        </div>
+        <div class="menu">
+            <button>Menu</button>
+            <div class="menu-content">
+                <a href="#about">Tentang Kami</a>
+                <a href="#programs">Program Kami</a>
+                <a href="#register">Pendaftaran</a>
+                <a href="#contact">Kontak</a>
+            </div>
+        </div>
     </div>
-    <div class="container">
-        <div class="text">
-	    <h2>Daftar sekarang juga!</h2>
-	    <p>Informasi lebih lanjut hubungi admin kami</p>
-	</div>
-        <a href="https://wa.me/6287865621998" class="whatsapp-button" target="_blank">
-            Chat Admin
-        </a>
+
+    <div class="content">
+        <div class="section" id="about">
+            <h2>Tentang Kami</h2>
+            <p>Darul Qur'an Barokah adalah sebuah perusahaan yang berizin resmi pada Kementrian Hukum dan Hak Asasi Manusia serta memiliki Nomor Izin Berusaha yang terdaftar.</p>
+            <p>Seiring perkembangan zaman pada era modernisasi, kebutuhan dalam peningkatan pencapaian dan perkembangan pengetahuan sangat amat sekali dibutuhkan, baik pada bidang pengetahuan umum keagamaan, guna untuk kepentingan dan keperluan pada persiapan dalam menghadapi tantangan zaman.</p>
+            <p>Maka dari itu, Kami memberikan solusi bagi generasi milenial yang membutuhkan tambahan belajar dalam upaya peningkatan mutu prestasi, Kelas yang disediakan berbasis tatap muka dan dalam jaringan seperti platform Google Meet, Zoom Meet dan sebagainya. Serta materi yang dibahas dalam kegiatan pembelajaran berdasarkan silabus dan kurikulum yang berlaku pada sistem pendidikan di Negara Republik Indonesia.</p>
+        </div>
+
+        <div class="section" id="programs">
+            <h2>Program Kami</h2>
+            <h2>Kelas Tahfidz Online</h2>
+            <p>Tahfidz Darul Qur'an adalah program belajar dan menghafal Al-Qur'an tanpa terkendala jarak dan waktu sehingga sangat fleksibel bagi sahabat yang memiliki kesibukan yang luar biasa</p>
+            <div class="container">
+                <div class="column">
+                      <h2>Aktifitas program</h2>
+                      <li>Setoran hafalan dapat dilakukan setiap hari.</li>
+                      <li>Kajian rutin mingguan.</li>
+                </div>
+                <div class="column">
+                       <h2>Manfaat Bagi Sahabat</h2>
+                       <li>🤍Ketenangan Jiwa</li>
+                       <li>👤Jadi Panutan</li>
+                       <li>✨Kemuliaan</li>
+                </div>
+                <div class="column">
+                      <h2>Aktifitas program</h2>
+                      <li>Setoran hafalan dapat dilakukan setiap hari.</li>
+                      <li>Kajian rutin mingguan.</li>
+                </div>
+            </div>
+            <div class="content">
+                <h2>Metode Setoran</h2>
+                <p>Setoran dilakukan melalui Video Call WhatsApp, waktu setoran pun bisa disesuaikan dengan kesibukan tanpa mengganggu aktivitas Sahabat✨</p>
+            </div>
+        </div>
     </div>
+
+        <div class="section" id="register">
+            <h2>Pendaftaran</h2>
+            <p>Jika Anda tertarik untuk bergabung dengan program kami, daftar sekarang!</p>
+            <a class="register-button"     <a href="https://wa.me/085892198268?text=Halo%20Admin%2C%20saya%20ingin%20bertanya%20tentang%20produk%20Anda." class="whatsapp-button"> 
+                Chat Admin
+            </a>
+        </div>
+
+        <div class="section" id="contact">
+            <h2>Ikuti Sosial Media Kami</h2>
+            <a href="https://facebook.com" target="_blank">Facebook</a>
+            <a href="https://twitter.com" target="_blank">Twitter</a>
+            <a href="https://instagram.com" target="_blank">Instagram</a>
+        </div>
+    </div>
+
 </body>
 </html>
